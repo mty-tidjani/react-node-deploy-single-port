@@ -1,0 +1,12 @@
+version: "2"
+services:
+  app:
+    image: medium_frontend_image
+    container_name: medium_frontend
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "4000:4000"
+    volumes:
+      - /app/node_modules
